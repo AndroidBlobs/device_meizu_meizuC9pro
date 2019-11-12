@@ -1,0 +1,57 @@
+#
+# from device/sprd/sharkle/SM1802/system.prop
+#
+# Default density config
+#ro.sf.lcd_density=320
+#ro.sf.lcd_width=54
+#ro.sf.lcd_height=96
+ro.product.hardware=SM1802
+# Set Opengl ES Version
+#ro.opengles.version=196609
+
+# ro.fm.chip.port.UART.androidm=true
+
+# FRP property for pst device
+ro.frp.pst=/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/persist
+
+#enable audio nr tuning
+ro.audio_tunning.nr=1
+
+#set low battery level for disable flash
+persist.sys.cam.battery.flash = 10
+
+#Enable sdcardfs feature
+ro.sys.sdcardfs=true
+persist.sys.sdcardfs=force_on
+
+#enable hdr+normal pic mode
+persist.sys.cam.normalhdr=true
+
+#enable 3d calibration
+persist.sys.3d.calibraion=1
+
+#enable blur mode
+persist.sys.cam.fr.blur.version=1
+persist.sys.cam.blur.cov.id=3
+#Miki <MIKI_BSP_CAM> <yao_yc> <2018-05-31> modify for qemu begin
+qemu.hw.mainkeys=0
+#Miki <MIKI_BSP_CAM> <yao_yc> <2018-05-31> modify for qemu end
+
+#Miki <MIKI_WIFI> <shen_l> <2018-07-02> modify for wifi name begin
+persist.sys.wifi.directname=meizu C9 pro
+#Miki <MIKI_WIFI> <shen_l> <2018-07-02> modify for wifi name eng
+
+#Miki <MIKI_USB> <xu_xq> <20180609> add for usb vid and pid begin
+#pid (M -> mtp; D -> adb; P -> ptp;)
+sys.usb.vid=0x2a45
+sys.M.pid=0x2008
+sys.M_D.pid=0x0c02
+sys.P.pid=0x200b
+sys.P_D.pid=0x200c
+#Miki <MIKI_USB> <xu_xq> <20180609> add for usb vid and pid end
+
+#Miki <MIKI_GMS> <shenl> <20180702> fix for GMS test failed begin
+persist.logd.size=262144
+#Miki <MIKI_GMS> <shenl> <20180702> fix for GMS test failed end
+
+#
